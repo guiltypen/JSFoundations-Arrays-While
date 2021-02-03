@@ -1,85 +1,46 @@
-/**
- * isArrayLengthOdd(numbers):
- * - receives array `numbers`
- * - returns true if array has an odd number of elements
- * - returns false otherwise
- *
- * e.g.
- * isArrayLengthOdd([1, 2, 3]) -> true
- * isArrayLengthOdd([1, 2, 3, 4]) -> flase
- */
 function isArrayLengthOdd(numbers) {
-  // Your code here
+  let nlength = numbers.length; // get array lenght
+  return nlength % 2 == 0 ? false : true; // returns true if odd and false if even
 }
 
-/**
- * isArrayLengthEven(numbers):
- * - receives array `numbers`
- * - returns true if array has an even number of elements
- * - returns false otherwise
- *
- * e.g.
- * isArrayLengthEven([1, 2, 3]) -> false
- * isArrayLengthEven([1, 2, 3, 4]) -> true
- */
 function isArrayLengthEven(numbers) {
-  // Your code here
+  let nlength = numbers.length; // get array length
+  return nlength % 2 == 0 ? true : false; // returns true if even and false if odd
 }
 
-/**
- * addLailaToArray(instructors):
- * - receives array `instructors`
- * - returns a new array that's a copy of array `instructors` with additional string "Laila"
- *
- * e.g.
- * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
- */
 function addLailaToArray(instructors) {
-  // Your code here
+  instructors.push("Laila"); // add Laila to array
+  return instructors; // returns the array
 }
 
-/**
- * eliminateTeam(teams):
- * - receives array `teams`
- * - removes the last element from the array and return it
- *
- * e.g.
- * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
- */
 function eliminateTeam(teams) {
-  // Your code here
+  return teams.pop(); // remove the last array value
 }
 
-/**
- * secondHalfOfArrayIfItIsEven(fruits):
- * - receives array `fruits`
- * - returns a new array that's the second half of the original array if it has an even number of elements
- * - returns an empty array if it has an odd number of elements
- *
- * e.g.
- * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]) -> ["banana", "kiwi"]
- * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
- */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
+  if (fruits.length % 2 == 0) {
+    // if even
+    let newarry = fruits.slice(fruits.length / 2, fruits.length); // slice the array from half of the length to the end
+    return newarry;
+  } else if (fruits.length % 2 == 1) {
+    // if odd
+
+    return [];
+  }
 }
 
-/**
- * youGottaCalmDown(shout):
- * - receives a string `shout`
- * - returns the string `shout` with at most one exclamation mark (!) at the end.
- *
- * e.g.
- * youGottaCalmDown("HI!!!!!!!!!!") -> "HI!"
- * youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!") -> "Taylor Shwifting!"
- * youGottaCalmDown("Hellooooo") -> "Hellooooo"
- *
- * Hint:
- * - Use string method .slice()
- * - Use string method .endsWith()
- */
 function youGottaCalmDown(shout) {
-  // Your code here
+  let asplit = shout.split(""); // splits string to array
+  let x = []; // empty array
+  let i = 0; // counting variable
+  while (shout[i] != "!") {
+    // while the array doesnt equal !
+    x[i] = shout[i]; // add value the array x
+    i++; // count
+  }
+  x[i] = shout[i + 1]; // add ! to the array
+  let y = x.join(""); // convert array to string
+  return y; // return the new string
 }
 
 module.exports = {
