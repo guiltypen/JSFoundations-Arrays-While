@@ -28,7 +28,7 @@ function secondHalfOfArrayIfItIsEven(fruits) {
     return [];
   }
 }
-
+/*
 function youGottaCalmDown(shout) {
   let asplit = shout.split(""); // splits string to array
   let x = []; // empty array
@@ -41,8 +41,14 @@ function youGottaCalmDown(shout) {
   x[i] = shout[i + 1]; // add ! to the array
   let y = x.join(""); // convert array to string
   return y; // return the new string
+}*/
+function youGottaCalmDown(shout) {
+  let i = 0;
+  while (shout.slice(i, i + 1) != "!") i++;
+  return shout.slice(0, i + 1); // return the sliced string
 }
 
+// youGottaCalmDown(shout);
 module.exports = {
   isArrayLengthOdd,
   isArrayLengthEven,
